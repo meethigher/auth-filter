@@ -1,0 +1,9 @@
+server:
+  port: 9999
+spring:
+#  web:
+#    resources:
+#      static-locations: file:D:/
+  mvc:
+    static-path-pattern: /test/**
+

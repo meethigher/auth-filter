@@ -1,0 +1,10 @@
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('1','1893bb754c903000', '1893bf58a3303000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('2','1893bb65c9103000', '1893be1647f03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('3','1893baf974603000', '1893be0a10503000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('4','1893baf144803000', '1893bd9ce1f03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('5','1893b8a962403000', '1893bd8b39a03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('6','1893bb6a55003000', '1893be3839a03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('7','1893bc15a6f03000', '18949d32ffa03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('8','1893bc15a6f03000', '18949c7285c03000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('9','1893bc15a6f03000', '18949af575403000');
+INSERT INTO "plan_device_link" ("link_id","device_id", "plan_id") VALUES ('10','1893bc0261003000', '1894eeb74cc03000');
