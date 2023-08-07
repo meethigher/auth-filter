@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_HOME" value="logs" />
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}--%level--${PID}--[%thread]--%-40.40logger{39}:%line : %msg %n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+
+
+    <!-- 减少部分日志 -->
+    <!-- 业务日志 -->
+    <!-- 此处配置优先级高于root -->
+    <logger name="top.meethigher.snipurl.utils.GlobalDecorator" level="DEBUG"/>
+    <logger name="org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener" level="WARN"/>
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

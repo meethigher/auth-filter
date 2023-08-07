@@ -1,4 +1,4 @@
-package top.meethigher.controller;
+package top.meethigher.example.controller;
 
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;

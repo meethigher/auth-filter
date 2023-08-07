@@ -1,11 +1,11 @@
-package top.meethigher.config;
+package top.meethigher.example.config;
 
 
-import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
 import org.springframework.util.ObjectUtils;
 import top.meethigher.utils.JSONUtils;
 import top.meethigher.utils.Resp;
@@ -39,7 +39,7 @@ public class AuthFilterConfig {
         registrationBean.setFilter(new AuthFilter());
         //过滤器名称
         registrationBean.setName("AuthFilter");
-        //拦截规则
+        //拦截规则，就类似于jsp项目中@WebFilter配置urlPattern，该过程由web容器匹配，并不由spring管理
         registrationBean.addUrlPatterns("/test/test1/*");
         //过滤器顺序
         registrationBean.setOrder(FilterRegistrationBean.HIGHEST_PRECEDENCE);
@@ -67,7 +67,7 @@ public class AuthFilterConfig {
             if (ObjectUtils.isEmpty(token)) {
                 Resp resp = Resp.getFailureResp("授权失败");
                 String s = JSONUtils.toJSONString(resp);
-                response.setContentType("application/json;charset=utf-8");
+                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
                 response.getOutputStream().write(s.getBytes(StandardCharsets.UTF_8));
                 return false;
             } else {

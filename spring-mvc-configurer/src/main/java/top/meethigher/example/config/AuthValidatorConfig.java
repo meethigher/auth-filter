@@ -1,6 +1,7 @@
-package top.meethigher.config;
+package top.meethigher.example.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -44,7 +45,7 @@ public class AuthValidatorConfig implements WebMvcConfigurer {
             if (ObjectUtils.isEmpty(token)) {
                 Resp resp = Resp.getFailureResp("授权失败");
                 String s = JSONUtils.toJSONString(resp);
-                response.setContentType("application/json;charset=utf-8");
+                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
                 response.getOutputStream().write(s.getBytes(StandardCharsets.UTF_8));
                 return false;
             } else {

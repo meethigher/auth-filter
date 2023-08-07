@@ -20,7 +20,6 @@
         <module>spring-mvc-configuration-support</module>
         <module>filter</module>
         <module>common</module>
-        <module>spring-shiro</module>
     </modules>
 
 

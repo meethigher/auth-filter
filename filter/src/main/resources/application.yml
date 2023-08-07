@@ -1,4 +1,6 @@
 server:
+#  tomcat:
+#    relaxed-path-chars:
   port: 9999
 spring:
 #  web:
